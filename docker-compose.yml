@@ -5,10 +5,11 @@ services:
         volumes:
             - /home/raspi/nextcloud/db:/var/lib/postgresql/data
         environment:
-            - POSTGRES_PASSWORD=Affirm2-Evaluate1-Tweed3-Reggae1
+            - POSTGRES_PASSWORD=Emphases5-Character3-Pranker3-Cornmeal8
         networks:
             - nextcloud-net
         image: postgres
+        restart: always
 
     nextcloud:
         container_name: nextcloud
@@ -19,9 +20,8 @@ services:
         networks:
             - nextcloud-net
         image: nextcloud
+        restart: always
 
 networks:
     nextcloud-net:
-        external: true
         name: nextcloud-net
-
