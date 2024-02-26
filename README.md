@@ -12,3 +12,7 @@
 ## Run the Nextcloud
 
 On Portainer copy and paste the `docker-compose.yml` file and deploy the stack.
+
+## Install Nextcloud with PostgreSQL
+
+Follow [this tutorial](https://www.youtube.com/watch?v=CHWHQFwxFcE)
