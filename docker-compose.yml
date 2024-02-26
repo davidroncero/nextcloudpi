@@ -1,0 +1,27 @@
+version: "3"
+services:
+    postgres:
+        container_name: postgres
+        volumes:
+            - /home/raspi/nextcloud/db:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_PASSWORD=Affirm2-Evaluate1-Tweed3-Reggae1
+        networks:
+            - nextcloud-net
+        image: postgres
+
+    nextcloud:
+        container_name: nextcloud
+        ports:
+            - 8080:80
+        volumes:
+            - /home/raspi/nextcloud/nextcloud:/var/www/html
+        networks:
+            - nextcloud-net
+        image: nextcloud
+
+networks:
+    nextcloud-net:
+        external: true
+        name: nextcloud-net
+
